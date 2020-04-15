@@ -32,7 +32,7 @@ final class StyledButton: UIButton {
 		cornerRadius = 8
 		setupAppearance()
 		heightAnchor.constraint(equalToConstant: 56).isActive = true
-		titleLabel?.font = UIFont(descriptor: .preferredFontDescriptor(withTextStyle: .headline), size: 16)
+		titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
 	}
 
 	private func setupAppearance() {
