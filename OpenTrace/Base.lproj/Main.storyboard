@@ -102,7 +102,7 @@
         <!--How It Works View Controller-->
         <scene sceneID="f3t-QQ-sex">
             <objects>
-                <viewController storyboardIdentifier="howItWorks" modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="szA-K1-DiB" userLabel="How It Works View Controller" customClass="PermissionCheckViewCOntroller" customModule="OpenTrace" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="howItWorks" modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="szA-K1-DiB" userLabel="How It Works View Controller" customClass="PermissionCheckViewController" customModule="OpenTrace" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e8O-pH-ICg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

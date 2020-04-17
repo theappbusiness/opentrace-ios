@@ -6,7 +6,7 @@ import UIKit
 import FirebaseAuth
 import SafariServices
 
-final class PermissionCheckViewCOntroller: UIViewController {
+final class PermissionCheckViewController: UIViewController {
 
     private typealias Copy = DisplayStrings.Onboarding.PermissionCheck
 
@@ -99,7 +99,7 @@ final class PermissionCheckViewCOntroller: UIViewController {
 	}
 }
 
-extension PermissionCheckViewCOntroller: PermissionViewDelegate {
+extension PermissionCheckViewController: PermissionViewDelegate {
 	func didTapLink(url: URL) {
 		let safariVC = SFSafariViewController(url: url)
 		present(safariVC, animated: true)
