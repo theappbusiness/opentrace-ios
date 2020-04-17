@@ -1,11 +1,11 @@
 //
-//  HowItWorksViewController.swift
+//  PermissionCheckViewCOntroller.swift
 //  OpenTrace
 
 import UIKit
 import FirebaseAuth
 
-final class HowItWorksViewController: UIViewController {
+final class PermissionCheckViewCOntroller: UIViewController {
 
     private typealias Copy = DisplayStrings.Onboarding.HowItWorks
 

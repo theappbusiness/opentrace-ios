@@ -90,7 +90,7 @@
 		CFE598602449CE0400E22B50 /* PermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE5985F2449CE0400E22B50 /* PermissionView.swift */; };
 		D81F6C8924348A7300E4F52F /* Bluetrace.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81F6C8824348A7300E4F52F /* Bluetrace.swift */; };
 		D81F6C8C24348CC200E4F52F /* BluetraceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81F6C8B24348CC200E4F52F /* BluetraceProtocol.swift */; };
-		D8828AFF243DE9340008854F /* HowItWorksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DEB6812423AE2E00D99925 /* HowItWorksViewController.swift */; };
+		D8828AFF243DE9340008854F /* PermissionCheckViewCOntroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DEB6812423AE2E00D99925 /* PermissionCheckViewCOntroller.swift */; };
 		D8D3100B243C7ECD00D760B0 /* BluetraceV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D3100A243C7ECD00D760B0 /* BluetraceV2.swift */; };
 		EA86679A24475159007FF257 /* HealthCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA86679824475156007FF257 /* HealthCheckViewController.swift */; };
 		EA86679B2447515F007FF257 /* HealthCheckViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA86679924475156007FF257 /* HealthCheckViewController.xib */; };
@@ -221,7 +221,7 @@
 		D81F6C8824348A7300E4F52F /* Bluetrace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bluetrace.swift; sourceTree = "<group>"; };
 		D81F6C8B24348CC200E4F52F /* BluetraceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetraceProtocol.swift; sourceTree = "<group>"; };
 		D8D3100A243C7ECD00D760B0 /* BluetraceV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetraceV2.swift; sourceTree = "<group>"; };
-		D8DEB6812423AE2E00D99925 /* HowItWorksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowItWorksViewController.swift; sourceTree = "<group>"; };
+		D8DEB6812423AE2E00D99925 /* PermissionCheckViewCOntroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionCheckViewCOntroller.swift; sourceTree = "<group>"; };
 		D8EB201C23FBE216001C60EC /* help_center_article_style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = help_center_article_style.css; sourceTree = "<group>"; };
 		EA86679824475156007FF257 /* HealthCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthCheckViewController.swift; sourceTree = "<group>"; };
 		EA86679924475156007FF257 /* HealthCheckViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HealthCheckViewController.xib; sourceTree = "<group>"; };
@@ -459,7 +459,7 @@
 			isa = PBXGroup;
 			children = (
 				C5046D5B23EF18600046E96D /* IntroViewController.swift */,
-				D8DEB6812423AE2E00D99925 /* HowItWorksViewController.swift */,
+				D8DEB6812423AE2E00D99925 /* PermissionCheckViewCOntroller.swift */,
 				5D8B248A23F146C500DBB74D /* PhoneNumberViewController.swift */,
 				30BE1CB423F15D47005DCE4F /* OTPViewController.swift */,
 				C56CF43E23F18A15006B05B0 /* ConsentViewController.swift */,
@@ -984,7 +984,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8828AFF243DE9340008854F /* HowItWorksViewController.swift in Sources */,
+				D8828AFF243DE9340008854F /* PermissionCheckViewCOntroller.swift in Sources */,
 				872DCEA7243DBDDF0014B07E /* BlueTraceLocalNotifications.swift in Sources */,
 				EA8667B924489BD0007FF257 /* AdviceView.swift in Sources */,
 				B615C5A723F8EB1700345969 /* UIProgressView + Extension.swift in Sources */,
