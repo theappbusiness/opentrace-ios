@@ -21,7 +21,6 @@ final class PermissionCheckViewController: UIViewController {
 	private let pushNotificationCheck = PermissionView()
 	private let bluetoothPermission = PermissionView()
 
- 
     @IBAction func footerButtonTapped(_ sender: UIButton) {
 		guard permissionsAreValid() else { return }
         OnboardingManager.shared.completedIWantToHelp = true
@@ -65,7 +64,7 @@ final class PermissionCheckViewController: UIViewController {
 			self?.enableBluetoothPermissions()
 		})
 		bluetoothPermission.configure(with: Copy.bluetoothText, delegate: self, onCheck: { [weak self] in
-			self?.bluetoothPermission.isChecked = true
+			self?.checkBluetoothStatus()
 		})
 
 		[termsAndPrivacyCheck, pushNotificationCheck, bluetoothPermission].forEach { stackView.addArrangedSubview($0) }
@@ -82,6 +81,17 @@ final class PermissionCheckViewController: UIViewController {
 		}
 	}
 
+	private func checkBluetoothStatus() {
+		let bluetoothIsPoweredOn = BluetraceManager.shared.isBluetoothOn()
+        let bluetoothIsAuthorized = BluetraceManager.shared.isBluetoothAuthorized()
+		if bluetoothIsPoweredOn && bluetoothIsAuthorized {
+			bluetoothPermission.isChecked = true
+		} else {
+			bluetoothPermission.isChecked = false
+			presentBluetoothNotEnabledAlert()
+		}
+	}
+
 	private func permissionsAreValid() -> Bool {
 		guard [termsAndPrivacyCheck, pushNotificationCheck, bluetoothPermission].allSatisfy({ $0.isChecked == true}) else {
 			let alert = UIAlertController(title: Copy.PermissionsValidationError.title, message: Copy.PermissionsValidationError.message, preferredStyle: .alert)
@@ -94,6 +104,12 @@ final class PermissionCheckViewController: UIViewController {
 
 	private func presentNotificationAccessAlert() {
 		let alert = UIAlertController(title: Copy.NotificationError.title, message: Copy.NotificationError.message, preferredStyle: .alert)
+		alert.addAction(.init(title: DisplayStrings.General.ok, style: .default))
+		present(alert, animated: true)
+	}
+
+	private func presentBluetoothNotEnabledAlert() {
+		let alert = UIAlertController(title: Copy.BluetoothError.title, message: Copy.BluetoothError.message, preferredStyle: .alert)
 		alert.addAction(.init(title: DisplayStrings.General.ok, style: .default))
 		present(alert, animated: true)
 	}

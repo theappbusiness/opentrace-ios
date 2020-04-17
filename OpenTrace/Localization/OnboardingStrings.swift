@@ -55,6 +55,11 @@ extension DisplayStrings {
 				static let title = "Onboarding.PermissionCheck.NotificationError.title".localized
 				static let message = "Onboarding.PermissionCheck.NotificationError.message".localized
 			}
+
+			enum BluetoothError {
+				static let title = "Onboarding.PermissionCheck.BluetoothError.title".localized
+				static let message = "Onboarding.PermissionCheck.BluetoothError.message".localized
+			}
 		}
 
 		enum Constent {

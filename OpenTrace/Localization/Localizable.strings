@@ -31,6 +31,8 @@
 "Onboarding.PermissionCheck.PermissionsValidationError.message" = "All boxes must be checked to proceed";
 "Onboarding.PermissionCheck.NotificationError.title" = "Notification must be enabled";
 "Onboarding.PermissionCheck.NotificationError.message" = "To turn on notifications got to Settings > Notifications > APPNAME and set 'Allow Notifactions' to ON";
+"Onboarding.PermissionCheck.BluetoothError.title" = "Bluetooth status error";
+"Onboarding.PermissionCheck.BluetoothError.message" = "Please ensure that bluetooth is enabled on your device";
 
 // MARK: - Consent
 "Onboarding.Constent.header" = "Your consent is needed for the following:";
