@@ -45,7 +45,7 @@ final class HowItWorksViewController: UIViewController {
 		subTitleLabel.text = Copy.body
         greatBtn.setTitle(Copy.footerButtonTitle, for: .normal)
 		stackView.spacing = 19
-//        view.addAndPin(subview: loadingView)
+        view.addAndPin(subview: loadingView)
 		setupPermissions()
     }
 
