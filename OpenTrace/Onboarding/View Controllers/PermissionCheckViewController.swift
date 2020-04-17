@@ -31,7 +31,7 @@ final class PermissionCheckViewController: UIViewController {
                 self?.showError()
                 return
             }
-            self?.performSegue(withIdentifier: "iWantToHelpToConsentSegue", sender: self)
+            self?.performSegue(withIdentifier: "permissionsToHome", sender: self)
         }
     }
 
