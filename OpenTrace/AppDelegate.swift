@@ -15,7 +15,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         FirebaseApp.configure()
         Messaging.messaging().delegate = self
-
+        RemoteConfig.remoteConfig().fetchAndActivate { (status, error) in
+            print(status)
+        }
+        
         //configure the database manager
         self.configureDatabaseManager()
 
