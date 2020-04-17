@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import FirebaseRemoteConfig
 
 class DecisionManager {
     
@@ -18,9 +19,14 @@ class DecisionManager {
     private let symptoms: Symptoms
     
     init() {
-        let path = Bundle(for: Self.self).path(forResource: "SymptomQuestions", ofType: "json")!
-        let data = NSData(contentsOfFile: path)!
-        symptoms = try! JSONDecoder().decode(Symptoms.self, from: data as Data)
+        let data = RemoteConfig.remoteConfig().configValue(forKey: RemoteConfig.ConfigKeys.symptomQuestions.rawValue).dataValue
+        do {
+            symptoms = try JSONDecoder().decode(Symptoms.self, from: data)
+        } catch {
+            let path = Bundle(for: Self.self).path(forResource: "SymptomQuestions", ofType: "json")!
+            let data = NSData(contentsOfFile: path)!
+            symptoms = try! JSONDecoder().decode(Symptoms.self, from: data as Data)
+        }
     }
     
     var questions: [String] {
