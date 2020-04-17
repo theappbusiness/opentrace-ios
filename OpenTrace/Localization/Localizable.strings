@@ -14,10 +14,9 @@
 "Onboarding.DataNotUploaded" = "Data not uploaded";
 
 // MARK: - Intro
-"Onboarding.Intro.header" = "Help stop the spread of COVID-19 by turning Bluetooth on";
-"Onboarding.Intro.primaryBody" = "If you had close contact with a COVID-19 case, we help the health authority call you more quickly, to provide guidance and care.";
-"Onboarding.Intro.secondaryBody" = "To protect those around you, the health authority may also ask you to share your data.";
-"Onboarding.Intro.footerButtonTitle" = "I want to help";
+"Onboarding.Intro.header" = "Welcome to the Coronavirus COVID-19 Lockdown App";
+"Onboarding.Intro.primaryBody" = "A tool to reduce the spread of infectious diseases like COVID-19 through social distancing.";
+"Onboarding.Intro.footerButtonTitle" = "Continue";
 
 // MARK: - How It Works
 "Onboarding.HowItWorks.header" = "How OpenTrace works";

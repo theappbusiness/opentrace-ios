@@ -42,34 +42,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="01-casual-hero" translatesAutoresizingMaskIntoConstraints="NO" id="JYM-TW-Zxf">
-                                <rect key="frame" x="26" y="22" width="268" height="182"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="sceneMobile" translatesAutoresizingMaskIntoConstraints="NO" id="JYM-TW-Zxf">
+                                <rect key="frame" x="40" y="15" width="240" height="186"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="JYM-TW-Zxf" secondAttribute="height" multiplier="292:226" id="QdT-WT-Idg"/>
+                                </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G2G-ck-rYV">
-                                <rect key="frame" x="24" y="315.5" width="272" height="118"/>
+                                <rect key="frame" x="22" y="360.5" width="276" height="84"/>
                                 <string key="text">If you had close contact with a COVID-19 case, we help the health authority call you more quickly, to provide guidance and care.
 </string>
-                                <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LX0-7p-Shs">
-                                <rect key="frame" x="24" y="496" width="272" height="48"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LX0-7p-Shs" customClass="StyledButton" customModule="OpenTrace" customModuleProvider="target">
+                                <rect key="frame" x="24" y="507" width="272" height="36"/>
                                 <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="16"/>
-                                <state key="normal" title="I want to help" backgroundImage="button-gradient"/>
+                                <state key="normal" title="I want to help"/>
                                 <connections>
                                     <segue destination="szA-K1-DiB" kind="show" id="nrI-LJ-Wd1"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Help stop the spread of COVID-19 by turning Bluetooth on" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="00h-JA-MfK">
-                                <rect key="frame" x="24" y="203" width="272" height="88.5"/>
-                                <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To protect those around you, the health authority may also ask you to share your data." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6HD-UN-iTU">
-                                <rect key="frame" x="24" y="414.5" width="272" height="57.5"/>
-                                <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="13"/>
+                                <rect key="frame" x="22" y="241" width="276" height="100.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -77,29 +74,25 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="LX0-7p-Shs" firstAttribute="leading" secondItem="nOG-gl-32p" secondAttribute="leading" constant="24" id="2RI-Og-uUL"/>
-                            <constraint firstItem="JYM-TW-Zxf" firstAttribute="leading" secondItem="nOG-gl-32p" secondAttribute="leading" constant="26" id="3oB-vQ-Yiz"/>
-                            <constraint firstItem="LX0-7p-Shs" firstAttribute="top" secondItem="6HD-UN-iTU" secondAttribute="bottom" constant="24" id="F4B-Ja-6Sf"/>
-                            <constraint firstAttribute="trailing" secondItem="00h-JA-MfK" secondAttribute="trailing" constant="24" id="NAd-0c-YYN"/>
-                            <constraint firstItem="JYM-TW-Zxf" firstAttribute="top" secondItem="nOG-gl-32p" secondAttribute="top" constant="22" id="VIO-hQ-7VF"/>
-                            <constraint firstItem="00h-JA-MfK" firstAttribute="leading" secondItem="nOG-gl-32p" secondAttribute="leading" constant="24" id="Wzx-2V-Lmc"/>
-                            <constraint firstItem="G2G-ck-rYV" firstAttribute="top" secondItem="00h-JA-MfK" secondAttribute="bottom" constant="24" id="YLD-T6-3RE"/>
-                            <constraint firstItem="G2G-ck-rYV" firstAttribute="leading" secondItem="nOG-gl-32p" secondAttribute="leading" constant="24" id="aHd-Si-1th"/>
-                            <constraint firstItem="6HD-UN-iTU" firstAttribute="leading" secondItem="nOG-gl-32p" secondAttribute="leading" constant="24" id="co1-IB-Fm5"/>
-                            <constraint firstAttribute="trailing" secondItem="6HD-UN-iTU" secondAttribute="trailing" constant="24" id="e96-6m-EAm"/>
-                            <constraint firstItem="nOG-gl-32p" firstAttribute="bottom" secondItem="LX0-7p-Shs" secondAttribute="bottom" constant="24" id="n9t-dt-RuS"/>
+                            <constraint firstItem="JYM-TW-Zxf" firstAttribute="leading" secondItem="nOG-gl-32p" secondAttribute="leading" constant="40" id="3oB-vQ-Yiz"/>
+                            <constraint firstAttribute="trailing" secondItem="00h-JA-MfK" secondAttribute="trailing" constant="22" id="NAd-0c-YYN"/>
+                            <constraint firstItem="JYM-TW-Zxf" firstAttribute="top" secondItem="nOG-gl-32p" secondAttribute="top" constant="15" id="VIO-hQ-7VF"/>
+                            <constraint firstItem="00h-JA-MfK" firstAttribute="leading" secondItem="nOG-gl-32p" secondAttribute="leading" constant="22" id="Wzx-2V-Lmc"/>
+                            <constraint firstItem="G2G-ck-rYV" firstAttribute="top" secondItem="00h-JA-MfK" secondAttribute="bottom" constant="19" id="YLD-T6-3RE"/>
+                            <constraint firstItem="G2G-ck-rYV" firstAttribute="leading" secondItem="nOG-gl-32p" secondAttribute="leading" constant="22" id="aHd-Si-1th"/>
+                            <constraint firstItem="nOG-gl-32p" firstAttribute="bottom" secondItem="LX0-7p-Shs" secondAttribute="bottom" constant="25" id="n9t-dt-RuS"/>
                             <constraint firstItem="nOG-gl-32p" firstAttribute="trailing" secondItem="LX0-7p-Shs" secondAttribute="trailing" constant="24" id="nK5-YC-mhx"/>
-                            <constraint firstAttribute="trailing" secondItem="G2G-ck-rYV" secondAttribute="trailing" constant="24" id="s4I-2T-K95"/>
-                            <constraint firstItem="00h-JA-MfK" firstAttribute="top" secondItem="JYM-TW-Zxf" secondAttribute="bottom" constant="-1" id="vGJ-xR-jsh"/>
-                            <constraint firstAttribute="trailing" secondItem="JYM-TW-Zxf" secondAttribute="trailing" constant="26" id="vvj-pg-dQK"/>
+                            <constraint firstAttribute="trailing" secondItem="G2G-ck-rYV" secondAttribute="trailing" constant="22" id="s4I-2T-K95"/>
+                            <constraint firstItem="00h-JA-MfK" firstAttribute="top" secondItem="JYM-TW-Zxf" secondAttribute="bottom" constant="40" id="vGJ-xR-jsh"/>
+                            <constraint firstAttribute="trailing" secondItem="JYM-TW-Zxf" secondAttribute="trailing" constant="40" id="vvj-pg-dQK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nOG-gl-32p"/>
                     </view>
                     <navigationItem key="navigationItem" id="M5c-Sc-QmX"/>
                     <connections>
-                        <outlet property="footerButton" destination="LX0-7p-Shs" id="x51-hl-j5C"/>
+                        <outlet property="footerButton" destination="LX0-7p-Shs" id="7Va-Y4-1lv"/>
                         <outlet property="headerLabel" destination="00h-JA-MfK" id="tpf-c0-rdX"/>
                         <outlet property="primaryBodyLabel" destination="G2G-ck-rYV" id="XUq-kf-Y06"/>
-                        <outlet property="secondaryBodyLabel" destination="6HD-UN-iTU" id="sNh-sS-R3h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ile-II-UJb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2002,7 +1995,6 @@ Your battery usage may increase.</string>
         </scene>
     </scenes>
     <resources>
-        <image name="01-casual-hero" width="292" height="182"/>
         <image name="05-incomplete-sick-person" width="143" height="104.5"/>
         <image name="1-3 progress" width="408" height="9"/>
         <image name="2-3 progress" width="408" height="9"/>
@@ -2021,6 +2013,7 @@ Your battery usage may increase.</string>
         <image name="person.circle" catalog="system" width="64" height="60"/>
         <image name="pogopics" width="270" height="170"/>
         <image name="redcross" width="22" height="22"/>
+        <image name="sceneMobile" width="292" height="226"/>
         <image name="share" width="17" height="17"/>
         <image name="small tick" width="22" height="22"/>
         <image name="smartphone" width="24" height="24"/>
