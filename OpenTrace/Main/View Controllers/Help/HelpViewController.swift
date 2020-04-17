@@ -75,7 +75,12 @@ extension HelpViewController: UITableViewDelegate, UITableViewDataSource {
 		if let url = dataSource[indexPath.section - 1].rows[indexPath.row].url {
 			let safariViewController = SFSafariViewController(url: url)
 			present(safariViewController, animated: true)
-		}
+        } else if let openSettings = dataSource[indexPath.section - 1].rows[indexPath.row].openSettings, openSettings {
+            let settingsURL = URL(string: UIApplication.openSettingsURLString)!
+            if UIApplication.shared.canOpenURL(settingsURL) {
+                UIApplication.shared.open(settingsURL, options: [:], completionHandler: nil)
+            }
+        }
 		tableView.cellForRow(at: indexPath)?.isSelected = false
 	}
 }
@@ -91,6 +96,7 @@ extension HelpViewController {
 		let title: String
 		let subTitle: String
 		let urlString: String?
+        let openSettings: Bool?
 
 		var url: URL? {
 			guard let urlString = urlString else { return nil }

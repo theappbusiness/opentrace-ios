@@ -1,32 +1,53 @@
 [
 	{
-		"title": "About the app",
+		"title": "About the virus",
 		"rows": [
 			{
 				"title": "How do I use this?",
-				"subTitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed",
-				"urlString": "https://www.google.com/"
+				"subTitle": "Stay at home as much as possible, ensure good hygiene practice and only go outside if it is really necessary. Keep 1.5 meters distance (2 arm lengths) from others, keeping a distance of 1.5 metres reduces the chance of people infecting each other.",
+				"urlString": "https://www.rivm.nl/en/novel-coronavirus-covid-19/novel-coronavirus-covid-19/questions-and-answers#preventinfection"
 			},
 			{
-				"title": "Does this steal my data?",
-				"subTitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et",
-				"urlString": "https://www.google.com/"
+				"title": "I have other questions about the virus",
+				"subTitle": "Please check the official website or call 0800- 1351",
+				"urlString": "https://www.rivm.nl/en/novel-coronavirus-covid-19/novel-coronavirus-covid-19/questions-and-answers#039;s%20Novel%20coronavirus%20in%20China"
 			}
 		]
 	},
 	{
-		"title": "About the virus",
+		"title": "About this application",
 		"rows": [
 			{
-				"title": "What is a virus?",
-				"subTitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud",
-				"urlString": "https://www.google.com/"
+				"title": "How does this app help the spread of the Virus?",
+				"subTitle": "The application supports source and contract tracing for COVID-19 and provices remote support where needed. We're able to monitor the outbreak more closely and provide intensive care where needed. ",
+				"urlString": null
 			},
 			{
-				"title": "How you can protect yourself?",
-				"subTitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et",
+				"title": "Why do I have to selfmonitor?",
+				"subTitle": "We get a better picture of how you feel and can better guide you remotely. We are able to provide you with the correct information and provide more intensive care if needed.",
 				"urlString": null
-			}
+			},
+            {
+                "title": "Do I have to be worried about my Privacy?",
+                "subTitle": "No, your data is yours. We don't know who you are. Bluetooth helps us to identify who you have been in contact with. This data is only used if you are tested positive for COVID-19. Even then, we will not be able to identify you.",
+                "urlString": null,
+                "openSettings": true
+            }
 		]
-	}
+	},
+    {
+        "title": "About this application",
+        "rows": [
+            {
+                "title": "What is an Intelligent Lockdown?",
+                "subTitle": "",
+                "urlString": "https://www.rivm.nl/en/novel-coronavirus-covid-19/novel-coronavirus-covid-19/questions-and-answers#039;s%20Novel%20coronavirus%20in%20China"
+            },
+            {
+                "title": "What are the latest stats?",
+                "subTitle": "",
+                "urlString": "https://www.rivm.nl/en/novel-coronavirus-covid-19/current-information-about-novel-coronavirus-covid-19"
+            }
+        ]
+    }
 ]

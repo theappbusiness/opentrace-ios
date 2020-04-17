@@ -18,7 +18,7 @@ extension HelpViewController {
 			didSet {
 				titleLabel.text = model?.title
 				subTitleLabel.text = model?.subTitle
-				if model?.urlString != nil {
+                if model?.urlString != nil || model?.openSettings != nil {
 					let image = UIImage(named: "discIndicator")
 					let indicatorImageView = UIImageView(image: image)
 					accessoryView = indicatorImageView
