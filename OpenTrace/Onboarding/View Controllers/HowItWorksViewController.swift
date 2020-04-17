@@ -71,7 +71,7 @@ final class HowItWorksViewController: UIViewController {
 
 final class PermissionView: UIView {
 
-	private let checkBoxButton = UIButton()
+	private let checkBoxButton = CheckboxButton()
 	private let label = UILabel()
 	private var checkButtonAction: ((Bool) -> Void)?
 
