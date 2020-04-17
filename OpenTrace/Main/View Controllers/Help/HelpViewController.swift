@@ -72,6 +72,7 @@ extension HelpViewController: UITableViewDelegate, UITableViewDataSource {
 	}
 
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.cellForRow(at: indexPath)?.isSelected = false
 		if let url = dataSource[indexPath.section - 1].rows[indexPath.row].url {
 			let safariViewController = SFSafariViewController(url: url)
 			present(safariViewController, animated: true)
@@ -81,7 +82,7 @@ extension HelpViewController: UITableViewDelegate, UITableViewDataSource {
                 UIApplication.shared.open(settingsURL, options: [:], completionHandler: nil)
             }
         }
-		tableView.cellForRow(at: indexPath)?.isSelected = false
+		
 	}
 }
 
