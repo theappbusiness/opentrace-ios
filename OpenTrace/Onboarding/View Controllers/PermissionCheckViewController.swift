@@ -94,22 +94,22 @@ final class PermissionCheckViewController: UIViewController {
 
 	private func permissionsAreValid() -> Bool {
 		guard [termsAndPrivacyCheck, pushNotificationCheck, bluetoothPermission].allSatisfy({ $0.isChecked == true}) else {
-			let alert = UIAlertController(title: Copy.PermissionsValidationError.title, message: Copy.PermissionsValidationError.message, preferredStyle: .alert)
-			alert.addAction(.init(title: DisplayStrings.General.ok, style: .default))
-			present(alert, animated: true)
+			presentAlertWith(title: Copy.PermissionsValidationError.title, message: Copy.PermissionsValidationError.message)
 			return false
 		}
 		return true
 	}
 
 	private func presentNotificationAccessAlert() {
-		let alert = UIAlertController(title: Copy.NotificationError.title, message: Copy.NotificationError.message, preferredStyle: .alert)
-		alert.addAction(.init(title: DisplayStrings.General.ok, style: .default))
-		present(alert, animated: true)
+		presentAlertWith(title: Copy.NotificationError.title, message: Copy.NotificationError.message)
 	}
 
 	private func presentBluetoothNotEnabledAlert() {
-		let alert = UIAlertController(title: Copy.BluetoothError.title, message: Copy.BluetoothError.message, preferredStyle: .alert)
+		presentAlertWith(title: Copy.BluetoothError.title, message: Copy.BluetoothError.message)
+	}
+
+	private func presentAlertWith(title: String, message: String) {
+		let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
 		alert.addAction(.init(title: DisplayStrings.General.ok, style: .default))
 		present(alert, animated: true)
 	}
