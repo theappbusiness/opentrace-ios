@@ -27,6 +27,10 @@
 "Onboarding.PermissionCheck.termsHighlightedText" = "Terms of use";
 "Onboarding.PermissionCheck.noticationText" = "Agree to have push notifications. Please remember to switch these on.";
 "Onboarding.PermissionCheck.bluetoothText" = "You agree to accept our bluetooth data sharing without any personal data.";
+"Onboarding.PermissionCheck.PermissionsValidationError.title" = "Missing Fields";
+"Onboarding.PermissionCheck.PermissionsValidationError.message" = "All boxes must be checked to proceed";
+"Onboarding.PermissionCheck.NotificationError.title" = "Notification must be enabled";
+"Onboarding.PermissionCheck.NotificationError.message" = "To turn on notifications got to Settings > Notifications > APPNAME and set 'Allow Notifactions' to ON";
 
 // MARK: - Consent
 "Onboarding.Constent.header" = "Your consent is needed for the following:";

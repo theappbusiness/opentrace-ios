@@ -57,8 +57,8 @@ final class PermissionCheckViewCOntroller: UIViewController {
 
 	private func setupPermissions() {
 		termsAndPrivacyCheck.configure(with: Copy.termsAndPrivacyPolicyText,
-									   linkText: [.init(text: Copy.privacyPolicyHighlightedText, link: "" ),
-												  .init(text: Copy.termsHighlightedText, link: "" )], delegate: self, onCheck: { [weak self] in
+									   linkText: [.init(text: Copy.privacyPolicyHighlightedText, link: "https://www.google.com/" ),
+												  .init(text: Copy.termsHighlightedText, link: "https://www.google.com/" )], delegate: self, onCheck: { [weak self] in
 			self?.termsAndPrivacyCheck.isChecked = true
 		})
 		pushNotificationCheck.configure(with: Copy.noticationText, delegate: self, onCheck: { [weak self] in
@@ -76,7 +76,7 @@ final class PermissionCheckViewCOntroller: UIViewController {
 			if granted  {
 				self?.pushNotificationCheck.isChecked = true
 			} else {
-				self?.presentNNotificationAccessAlert()
+				self?.presentNotificationAccessAlert()
 				self?.pushNotificationCheck.isChecked = false
 			}
 		}
@@ -84,17 +84,17 @@ final class PermissionCheckViewCOntroller: UIViewController {
 
 	private func permissionsAreValid() -> Bool {
 		guard [termsAndPrivacyCheck, pushNotificationCheck, bluetoothPermission].allSatisfy({ $0.isChecked == true}) else {
-			let alert = UIAlertController(title: "Missing Fields", message: "All boxes must be checked to proceed", preferredStyle: .alert)
-			alert.addAction(.init(title: "Ok", style: .default))
+			let alert = UIAlertController(title: Copy.PermissionsValidationError.title, message: Copy.PermissionsValidationError.message, preferredStyle: .alert)
+			alert.addAction(.init(title: DisplayStrings.General.ok, style: .default))
 			present(alert, animated: true)
 			return false
 		}
 		return true
 	}
 
-	private func presentNNotificationAccessAlert() {
-		let alert = UIAlertController(title: "Notification must be enabled", message: "To turn on notifications got to Settings > Notifications > APPNAME and set 'Allow Notifactions' to ON", preferredStyle: .alert)
-		alert.addAction(.init(title: "Ok", style: .default))
+	private func presentNotificationAccessAlert() {
+		let alert = UIAlertController(title: Copy.NotificationError.title, message: Copy.NotificationError.message, preferredStyle: .alert)
+		alert.addAction(.init(title: DisplayStrings.General.ok, style: .default))
 		present(alert, animated: true)
 	}
 }
