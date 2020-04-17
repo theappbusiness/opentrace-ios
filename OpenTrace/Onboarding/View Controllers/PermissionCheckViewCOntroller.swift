@@ -4,10 +4,11 @@
 
 import UIKit
 import FirebaseAuth
+import SafariServices
 
 final class PermissionCheckViewCOntroller: UIViewController {
 
-    private typealias Copy = DisplayStrings.Onboarding.HowItWorks
+    private typealias Copy = DisplayStrings.Onboarding.PermissionCheck
 
     @IBOutlet private var footerButton: StyledButton!
     
@@ -55,13 +56,15 @@ final class PermissionCheckViewCOntroller: UIViewController {
     }
 
 	private func setupPermissions() {
-		termsAndPrivacyCheck.configure(with: "You agree to our Terms of use and privacy policy and we take this matter serious. ", onCheck: { [weak self] in
+		termsAndPrivacyCheck.configure(with: Copy.termsAndPrivacyPolicyText,
+									   linkText: [.init(text: Copy.privacyPolicyHighlightedText, link: "" ),
+												  .init(text: Copy.termsHighlightedText, link: "" )], delegate: self, onCheck: { [weak self] in
 			self?.termsAndPrivacyCheck.isChecked = true
 		})
-		pushNotificationCheck.configure(with: "Agree to have push notifications. Please remember to switch these on.", onCheck: { [weak self] in
+		pushNotificationCheck.configure(with: Copy.noticationText, delegate: self, onCheck: { [weak self] in
 			self?.enableBluetoothPermissions()
 		})
-		bluetoothPermission.configure(with: "You agree to accept our bluetooth data sharing without any personal data.", onCheck: { [weak self] in
+		bluetoothPermission.configure(with: Copy.bluetoothText, delegate: self, onCheck: { [weak self] in
 			self?.bluetoothPermission.isChecked = true
 		})
 
@@ -93,5 +96,12 @@ final class PermissionCheckViewCOntroller: UIViewController {
 		let alert = UIAlertController(title: "Notification must be enabled", message: "To turn on notifications got to Settings > Notifications > APPNAME and set 'Allow Notifactions' to ON", preferredStyle: .alert)
 		alert.addAction(.init(title: "Ok", style: .default))
 		present(alert, animated: true)
+	}
+}
+
+extension PermissionCheckViewCOntroller: PermissionViewDelegate {
+	func didTapLink(url: URL) {
+		let safariVC = SFSafariViewController(url: url)
+		present(safariVC, animated: true)
 	}
 }

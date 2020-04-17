@@ -19,9 +19,14 @@
 "Onboarding.Intro.footerButtonTitle" = "Continue";
 
 // MARK: - How It Works
-"Onboarding.HowItWorks.header" = "Your data is private and we only use non personal information";
-"Onboarding.HowItWorks.body" = "In order for use to reduce the spread of Coronavirus please accept and agree to the following.";
-"Onboarding.HowItWorks.footerButtonTitle" = "I agree";
+"Onboarding.PermissionCheck.header" = "Your data is private and we only use non personal information";
+"Onboarding.PermissionCheck.body" = "In order for use to reduce the spread of Coronavirus please accept and agree to the following.";
+"Onboarding.PermissionCheck.footerButtonTitle" = "I agree";
+"Onboarding.PermissionCheck.termsAndPrivacyPolicyText" = "You agree to our Terms of use and privacy policy and we take this matter serious. ";
+"Onboarding.PermissionCheck.privacyPolicyHighlightedText" = "privacy policy";
+"Onboarding.PermissionCheck.termsHighlightedText" = "Terms of use";
+"Onboarding.PermissionCheck.noticationText" = "Agree to have push notifications. Please remember to switch these on.";
+"Onboarding.PermissionCheck.bluetoothText" = "You agree to accept our bluetooth data sharing without any personal data.";
 
 // MARK: - Consent
 "Onboarding.Constent.header" = "Your consent is needed for the following:";

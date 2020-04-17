@@ -36,10 +36,15 @@ extension DisplayStrings {
 			static let footerButtonTitle = "Onboarding.Intro.footerButtonTitle".localized
 		}
 
-		enum HowItWorks {
-			static let header = "Onboarding.HowItWorks.header".localized
-			static let body = "Onboarding.HowItWorks.body".localized
-			static let footerButtonTitle = "Onboarding.HowItWorks.footerButtonTitle".localized
+		enum PermissionCheck {
+			static let header = "Onboarding.PermissionCheck.header".localized
+			static let body = "Onboarding.PermissionCheck.body".localized
+			static let termsAndPrivacyPolicyText = "Onboarding.PermissionCheck.termsAndPrivacyPolicyText".localized
+			static let privacyPolicyHighlightedText = "Onboarding.PermissionCheck.privacyPolicyHighlightedText".localized
+			static let termsHighlightedText = "Onboarding.PermissionCheck.termsHighlightedText".localized
+			static let noticationText = "Onboarding.PermissionCheck.noticationText".localized
+			static let bluetoothText = "Onboarding.PermissionCheck.bluetoothText".localized
+			static let footerButtonTitle = "Onboarding.PermissionCheck.footerButtonTitle".localized
 		}
 
 		enum Constent {

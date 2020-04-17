@@ -7,12 +7,19 @@
 //
 
 import UIKit
+import SafariServices
+
+protocol PermissionViewDelegate: AnyObject {
+	func didTapLink(url: URL)
+}
 
 final class PermissionView: UIView {
 
 	private let checkBoxButton = CheckboxButton()
-	private let label = UILabel()
+	private let textView = UITextView()
 	private var checkButtonAction: (() -> Void)?
+
+	private weak var delegate: PermissionViewDelegate?
 
 	var isChecked: Bool {
 		get {
@@ -34,19 +41,37 @@ final class PermissionView: UIView {
 	}
 
 	private func setup() {
-		[checkBoxButton, label].forEach { view in
+		[checkBoxButton, textView].forEach { view in
 			addSubview(view)
 			view.translatesAutoresizingMaskIntoConstraints = false
 		}
-		label.font = UIFont.monospacedDigitSystemFont(ofSize: 14, weight: .regular)
-		label.numberOfLines = 0
+		textView.font = UIFont.systemFont(ofSize: 14, weight: .regular)
+		textView.textAlignment = .left
+		textView.isScrollEnabled = false
+		textView.isEditable = false
+		textView.delegate = self
+		textView.textContainer.lineFragmentPadding = 0
+		textView.textContainerInset = .zero
 		setupConstraints()
 		checkBoxButton.addTarget(self, action: #selector(checkButtonTapped), for: .touchDown)
 	}
 
-	func configure(with text: String, onCheck checkAction: @escaping () -> Void) {
-		label.text = text
+	func configure(with text: String, linkText: [LinkModel]? = nil, delegate: PermissionViewDelegate, onCheck checkAction: @escaping () -> Void) {
+		self.delegate = delegate
 		checkButtonAction = checkAction
+		let attributedString = NSMutableAttributedString(string: text, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14, weight: .regular)] )
+		setupLinks(linkText: linkText, text: text, attributedString: attributedString)
+		textView.attributedText = attributedString
+	}
+
+	func setupLinks(linkText: [LinkModel]?, text: String, attributedString: NSMutableAttributedString) {
+		linkText?.forEach { linkText in
+			let linkRange = NSString(string: text).range(of: linkText.text, options: .caseInsensitive)
+			attributedString.addAttribute(.link, value: linkText.link, range: linkRange)
+			attributedString.addAttributes([NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue,
+											NSAttributedString.Key.foregroundColor: UIColor.black], range: linkRange)
+		}
+		textView.linkTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
 	}
 
 	@objc private func checkButtonTapped() {
@@ -60,10 +85,25 @@ final class PermissionView: UIView {
 			checkBoxButton.heightAnchor.constraint(equalToConstant: 24),
 			checkBoxButton.widthAnchor.constraint(equalTo: checkBoxButton.heightAnchor),
 
-			label.topAnchor.constraint(equalTo: checkBoxButton.topAnchor),
-			label.leadingAnchor.constraint(equalTo: checkBoxButton.trailingAnchor, constant: 18),
-			label.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -8),
-			label.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -37)
+			textView.topAnchor.constraint(equalTo: checkBoxButton.topAnchor),
+			textView.leadingAnchor.constraint(equalTo: checkBoxButton.trailingAnchor, constant: 18),
+			textView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -8),
+			textView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -37)
 		])
+	}
+}
+
+extension PermissionView: UITextViewDelegate {
+	func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
+		delegate?.didTapLink(url: URL)
+		return false
+	}
+}
+
+extension PermissionView {
+
+	struct LinkModel {
+		let text: String
+		let link: String
 	}
 }
