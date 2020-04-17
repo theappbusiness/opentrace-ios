@@ -12,10 +12,15 @@ final class PermissionView: UIView {
 
 	private let checkBoxButton = CheckboxButton()
 	private let label = UILabel()
-	private var checkButtonAction: ((Bool) -> Bool)?
+	private var checkButtonAction: (() -> Void)?
 
 	var isChecked: Bool {
-		return checkBoxButton.isSelected
+		get {
+			return checkBoxButton.isSelected
+		}
+		set {
+			checkBoxButton.isSelected = newValue
+		}
 	}
 
 	override init(frame: CGRect) {
@@ -39,14 +44,13 @@ final class PermissionView: UIView {
 		checkBoxButton.addTarget(self, action: #selector(checkButtonTapped), for: .touchDown)
 	}
 
-	func configure(with text: String, onCheck checkAction: @escaping (Bool) -> Bool) {
+	func configure(with text: String, onCheck checkAction: @escaping () -> Void) {
 		label.text = text
 		checkButtonAction = checkAction
 	}
 
 	@objc private func checkButtonTapped() {
-		guard let isSelected = checkButtonAction?(isChecked) else { return }
-		checkBoxButton.isSelected = isSelected
+		checkButtonAction?()
 	}
 
 	private func setupConstraints() {
