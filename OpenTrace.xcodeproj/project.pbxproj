@@ -20,6 +20,7 @@
 		378E54682449BEA800AA8DAE /* InfectedNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378E54662449BEA800AA8DAE /* InfectedNotificationViewController.swift */; };
 		378E54692449BEA800AA8DAE /* InfectedNotificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 378E54672449BEA800AA8DAE /* InfectedNotificationViewController.xib */; };
 		378E546B2449BF4800AA8DAE /* InAppMessagesStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378E546A2449BF4800AA8DAE /* InAppMessagesStrings.swift */; };
+		378E546D2449EB3D00AA8DAE /* RemoteConfig+Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378E546C2449EB3D00AA8DAE /* RemoteConfig+Keys.swift */; };
 		37CDA247244759630085A56C /* UIAlertController+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CDA246244759630085A56C /* UIAlertController+Additions.swift */; };
 		553AA5CE243EC91700EE326F /* OnboardingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553AA5CD243EC91700EE326F /* OnboardingManager.swift */; };
 		557FD393243E4062006BDF38 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557FD392243E4062006BDF38 /* DatabaseManager.swift */; };
@@ -146,6 +147,7 @@
 		378E54662449BEA800AA8DAE /* InfectedNotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfectedNotificationViewController.swift; sourceTree = "<group>"; };
 		378E54672449BEA800AA8DAE /* InfectedNotificationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfectedNotificationViewController.xib; sourceTree = "<group>"; };
 		378E546A2449BF4800AA8DAE /* InAppMessagesStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppMessagesStrings.swift; sourceTree = "<group>"; };
+		378E546C2449EB3D00AA8DAE /* RemoteConfig+Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RemoteConfig+Keys.swift"; sourceTree = "<group>"; };
 		37CDA246244759630085A56C /* UIAlertController+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Additions.swift"; sourceTree = "<group>"; };
 		3C5E7E594E7634084F94F030 /* Pods-OpenTrace.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenTrace.debug.xcconfig"; path = "Target Support Files/Pods-OpenTrace/Pods-OpenTrace.debug.xcconfig"; sourceTree = "<group>"; };
 		553AA5CD243EC91700EE326F /* OnboardingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingManager.swift; sourceTree = "<group>"; };
@@ -326,6 +328,7 @@
 			isa = PBXGroup;
 			children = (
 				37CDA2452447594D0085A56C /* UIHelpers */,
+				378E546C2449EB3D00AA8DAE /* RemoteConfig+Keys.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1032,6 +1035,7 @@
 				30E91BEB23EFEA0B002D592A /* CodeInputView.swift in Sources */,
 				378E546B2449BF4800AA8DAE /* InAppMessagesStrings.swift in Sources */,
 				378E54682449BEA800AA8DAE /* InfectedNotificationViewController.swift in Sources */,
+				378E546D2449EB3D00AA8DAE /* RemoteConfig+Keys.swift in Sources */,
 				30BE1CAF23F1349F005DCE4F /* EncounterRecord.swift in Sources */,
 				B60F8BE6242667CB0007A641 /* UploadDataStep1VC.swift in Sources */,
 				553AA5CE243EC91700EE326F /* OnboardingManager.swift in Sources */,
