@@ -50,3 +50,34 @@ extension UIView {
          subview.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -padding.bottom).isActive = edges.contains(.bottom)
      }
 }
+
+extension UIView {
+	
+	struct Shadow {
+		
+		let color: UIColor
+		let offset: CGSize
+		let radius: CGFloat
+		let opacity: Float
+		
+		init(color: UIColor, offsetX: CGFloat = 0, offsetY: CGFloat, radius: CGFloat, opacity: Float) {
+			self.color = color
+			self.offset = CGSize(width: offsetX, height: offsetY)
+			self.radius = radius
+			self.opacity = opacity
+		}
+	}
+	
+	func apply(_ shadow: Shadow) {
+		layer.shadowColor = shadow.color.cgColor
+		layer.shadowOffset = shadow.offset
+		layer.shadowRadius = shadow.radius
+		layer.shadowOpacity = shadow.opacity
+	}
+}
+
+extension UIView.Shadow {
+	
+	static let footerCardShadow = UIView.Shadow(color: .black, offsetY: -2, radius: 0, opacity: 0.05)
+	
+}

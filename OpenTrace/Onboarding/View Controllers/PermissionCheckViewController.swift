@@ -16,6 +16,8 @@ final class PermissionCheckViewController: UIViewController {
 	@IBOutlet private var titleLabel: UILabel!
 	@IBOutlet private var subTitleLabel: UILabel!
 	private let loadingView = LoadingView()
+	@IBOutlet private var scrollView: UIScrollView!
+	@IBOutlet private var footerView: UIView!
 
 	private let termsAndPrivacyCheck = PermissionView()
 	private let pushNotificationCheck = PermissionView()
@@ -49,9 +51,11 @@ final class PermissionCheckViewController: UIViewController {
 		titleLabel.text = Copy.header
 		subTitleLabel.text = Copy.body
         footerButton.setTitle(Copy.footerButtonTitle, for: .normal)
+		scrollView.delegate = self
 		stackView.spacing = 19
         view.addAndPin(subview: loadingView)
 		setupPermissions()
+		footerView.apply(.footerCardShadow)
     }
 
 	private func setupPermissions() {
@@ -119,5 +123,12 @@ extension PermissionCheckViewController: PermissionViewDelegate {
 	func didTapLink(url: URL) {
 		let safariVC = SFSafariViewController(url: url)
 		present(safariVC, animated: true)
+	}
+}
+
+extension PermissionCheckViewController: UIScrollViewDelegate {
+	func scrollViewDidScroll(_ scrollView: UIScrollView) {
+		let alpha = (scrollView.contentSize.height - scrollView.frame.size.height) - scrollView.contentOffset.y
+		footerView.layer.shadowColor = UIColor.black.withAlphaComponent(alpha).cgColor
 	}
 }
