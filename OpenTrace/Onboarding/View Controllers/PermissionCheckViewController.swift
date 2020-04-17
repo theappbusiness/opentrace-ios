@@ -11,14 +11,13 @@ final class PermissionCheckViewController: UIViewController {
     private typealias Copy = DisplayStrings.Onboarding.PermissionCheck
 
     @IBOutlet private var footerButton: StyledButton!
-    
 	@IBOutlet private var stackView: UIStackView!
 	@IBOutlet private var titleLabel: UILabel!
 	@IBOutlet private var subTitleLabel: UILabel!
-	private let loadingView = LoadingView()
 	@IBOutlet private var scrollView: UIScrollView!
 	@IBOutlet private var footerView: UIView!
 
+	private let loadingView = LoadingView()
 	private let termsAndPrivacyCheck = PermissionView()
 	private let pushNotificationCheck = PermissionView()
 	private let bluetoothPermission = PermissionView()
@@ -61,7 +60,9 @@ final class PermissionCheckViewController: UIViewController {
 	private func setupPermissions() {
 		termsAndPrivacyCheck.configure(with: Copy.termsAndPrivacyPolicyText,
 									   linkText: [.init(text: Copy.privacyPolicyHighlightedText, link: "https://www.google.com/" ),
-												  .init(text: Copy.termsHighlightedText, link: "https://www.google.com/" )], delegate: self, onCheck: { [weak self] in
+												  .init(text: Copy.termsHighlightedText, link: "https://www.google.com/" )],
+									   delegate: self,
+									   onCheck: { [weak self] in
 			self?.termsAndPrivacyCheck.isChecked = true
 		})
 		pushNotificationCheck.configure(with: Copy.noticationText, delegate: self, onCheck: { [weak self] in
