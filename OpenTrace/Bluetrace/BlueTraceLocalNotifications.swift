@@ -82,13 +82,26 @@ extension BlueTraceLocalNotifications: UNUserNotificationCenterDelegate {
     func userNotificationCenter(_ center: UNUserNotificationCenter,
                                 willPresent notification: UNNotification,
                                 withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        completionHandler([.alert, .badge, .sound])
+        
+        presentInfectedNotificationVC()
+        completionHandler([])
     }
 
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         if response.notification.request.identifier == "bluetoothStatusNotifId" && !BluetraceManager.shared.isBluetoothAuthorized() {
             UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)
+        } else {
+            presentInfectedNotificationVC()
         }
         completionHandler()
+    }
+    
+    // I know this is a hack!!!!!
+    private func presentInfectedNotificationVC() {
+        let infectionNotificationVC = InfectedNotificationViewController()
+        guard let window = UIApplication.shared.keyWindow, let navController = window.rootViewController as? UINavigationController else {
+            return
+        }
+        navController.present(infectionNotificationVC, animated: true, completion: nil)
     }
 }

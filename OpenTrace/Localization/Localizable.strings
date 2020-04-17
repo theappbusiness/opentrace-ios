@@ -138,5 +138,11 @@
 "UploadData.UploadSuccess.subHeading" = "We'll inform the individuals you've recently been in contact with to avoid the Coronavirus from spreading.";
 "UploadData.UploadSuccess.primary_cta" = "Done";
 
+//MARK: - InAppMessages, InfectedContactNotification
+"UploadData.Info.title" = "You have been in contact with someone who tested positive for COVID-19";
+"UploadData.Info.subHeading" = "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accus antium. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accus antiumed ut perspi.";
+"UploadData.Info.primary_cta" = "OK";
+
+
 
 
