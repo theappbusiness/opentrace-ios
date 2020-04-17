@@ -78,7 +78,12 @@
 "General.cancel" = "Cancel";
 
 // MARK: - Home
+"Home.title" = "The Coronavirus COVID-19 Lockdown App";
+"Home.subtitle" = "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accus antium dolore mque lauda ntium esparanti dollo fiunti est forunti.";
+"Home.checkWhatTracking" = "Check what we are tracking";
 "Home.startMonitoring" = "Track my condition";
+"Home.shareTitle" = "Share this app";
+"Home.shareSubtitle" = "Ask friends and family to help.";
 
 // MARK: - Monitoring, Health Check
 "Monitoring.HealthCheck.title" = "How do you feel today?";
@@ -142,6 +147,12 @@
 "UploadData.UploadSuccess.title" = "Thank you for sharing";
 "UploadData.UploadSuccess.subHeading" = "We'll inform the individuals you've recently been in contact with to avoid the Coronavirus from spreading.";
 "UploadData.UploadSuccess.primary_cta" = "Done";
+
+//MARK: - InAppMessages, InfectedContactNotification
+"UploadData.Info.title" = "You have been in contact with someone who tested positive for COVID-19";
+"UploadData.Info.subHeading" = "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accus antium. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accus antiumed ut perspi.";
+"UploadData.Info.primary_cta" = "OK";
+
 
 
 
