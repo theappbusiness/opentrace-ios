@@ -48,6 +48,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navigateToCorrectPage()
         application.registerForRemoteNotifications()
 
+        window?.tintColor = .black
+        
         return true
     }
 
