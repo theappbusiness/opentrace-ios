@@ -107,64 +107,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="bluetooth-phones" translatesAutoresizingMaskIntoConstraints="NO" id="Pxu-Q6-QrV">
-                                <rect key="frame" x="26" y="22" width="268" height="169.5"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ML0-z9-4tI">
-                                <rect key="frame" x="24" y="245" width="272" height="236"/>
-                                <string key="text">We use Bluetooth signals to determine if you are near another OpenTrace user. 
-
-This proximity data is encrypted and stored only on your phone.
-
-The health authority will seek your consent to upload the data, if it’s needed for contact tracing.</string>
-                                <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="16"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2RA-ER-v0N">
-                                <rect key="frame" x="24" y="496" width="272" height="48"/>
-                                <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="16"/>
-                                <state key="normal" title="Great!!!" backgroundImage="button-gradient"/>
-                                <connections>
-                                    <action selector="greatBtnOnClick:" destination="szA-K1-DiB" eventType="touchUpInside" id="lgS-x6-CEg"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How OpenTrace works" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u5f-cs-P3k">
-                                <rect key="frame" x="24" y="203.5" width="272" height="29.5"/>
-                                <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d9z-dc-Ytb">
+                                <rect key="frame" x="0.0" y="490" width="320" height="78"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2RA-ER-v0N">
+                                        <rect key="frame" x="22" y="8" width="276" height="48"/>
+                                        <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="16"/>
+                                        <state key="normal" title="Great!!!" backgroundImage="button-gradient"/>
+                                        <connections>
+                                            <action selector="greatBtnOnClick:" destination="szA-K1-DiB" eventType="touchUpInside" id="lgS-x6-CEg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="2RA-ER-v0N" firstAttribute="leading" secondItem="d9z-dc-Ytb" secondAttribute="leading" constant="22" id="PNA-TN-mHL"/>
+                                    <constraint firstAttribute="trailing" secondItem="2RA-ER-v0N" secondAttribute="trailing" constant="22" id="Qtm-64-oqt"/>
+                                    <constraint firstAttribute="bottom" secondItem="2RA-ER-v0N" secondAttribute="bottom" constant="22" id="j9X-WR-evk"/>
+                                    <constraint firstItem="2RA-ER-v0N" firstAttribute="top" secondItem="d9z-dc-Ytb" secondAttribute="top" constant="8" id="rQI-rY-Whm"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Pxu-Q6-QrV" secondAttribute="trailing" constant="26" id="23V-Xk-1vz"/>
-                            <constraint firstItem="Pxu-Q6-QrV" firstAttribute="top" secondItem="Zbo-54-kdf" secondAttribute="top" constant="22" id="6JG-J7-V8G"/>
-                            <constraint firstItem="u5f-cs-P3k" firstAttribute="top" secondItem="Pxu-Q6-QrV" secondAttribute="bottom" constant="12" id="Abi-vE-eXs"/>
-                            <constraint firstItem="Zbo-54-kdf" firstAttribute="bottom" secondItem="2RA-ER-v0N" secondAttribute="bottom" constant="24" id="B6w-1z-CMx"/>
-                            <constraint firstItem="Zbo-54-kdf" firstAttribute="trailing" secondItem="2RA-ER-v0N" secondAttribute="trailing" constant="24" id="C8t-aq-y80"/>
-                            <constraint firstItem="ML0-z9-4tI" firstAttribute="top" secondItem="u5f-cs-P3k" secondAttribute="bottom" constant="12" id="JTe-gv-ScJ"/>
-                            <constraint firstItem="2RA-ER-v0N" firstAttribute="leading" secondItem="Zbo-54-kdf" secondAttribute="leading" constant="24" id="Qn5-z2-bOF"/>
-                            <constraint firstAttribute="trailing" secondItem="ML0-z9-4tI" secondAttribute="trailing" constant="24" id="S1u-yS-3cy"/>
-                            <constraint firstAttribute="trailing" secondItem="u5f-cs-P3k" secondAttribute="trailing" constant="24" id="ab9-Wb-Cce"/>
-                            <constraint firstItem="Pxu-Q6-QrV" firstAttribute="leading" secondItem="Zbo-54-kdf" secondAttribute="leading" constant="26" id="c9d-O8-SI0"/>
-                            <constraint firstItem="u5f-cs-P3k" firstAttribute="leading" secondItem="Zbo-54-kdf" secondAttribute="leading" constant="24" id="cfO-Xw-q1X"/>
-                            <constraint firstItem="ML0-z9-4tI" firstAttribute="leading" secondItem="Zbo-54-kdf" secondAttribute="leading" constant="24" id="gKr-qd-Elg"/>
+                            <constraint firstItem="d9z-dc-Ytb" firstAttribute="leading" secondItem="Zbo-54-kdf" secondAttribute="leading" id="LDg-vK-dsD"/>
+                            <constraint firstItem="d9z-dc-Ytb" firstAttribute="bottom" secondItem="Zbo-54-kdf" secondAttribute="bottom" id="XEu-cX-Cx7"/>
+                            <constraint firstItem="d9z-dc-Ytb" firstAttribute="trailing" secondItem="Zbo-54-kdf" secondAttribute="trailing" id="bgI-4d-FO9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Zbo-54-kdf"/>
                     </view>
                     <navigationItem key="navigationItem" id="lTd-N2-ef4"/>
                     <connections>
-                        <outlet property="bodyLabel" destination="ML0-z9-4tI" id="ZbT-k5-N7f"/>
                         <outlet property="greatBtn" destination="2RA-ER-v0N" id="2cv-VC-Mvx"/>
-                        <outlet property="headerLabel" destination="u5f-cs-P3k" id="GEG-Ks-mIb"/>
                         <segue destination="mND-9i-sIw" kind="show" identifier="iWantToHelpToPhoneSegue" id="5N3-QG-28h"/>
                         <segue destination="Rdb-X8-6v2" kind="show" identifier="iWantToHelpToConsentSegue" id="kGv-dV-JrM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aEv-D5-iP7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-7284" y="1249"/>
+            <point key="canvasLocation" x="-7284.375" y="1248.5915492957747"/>
         </scene>
         <!--Phone Number View Controller-->
         <scene sceneID="CVV-gW-tlC">
@@ -914,13 +895,13 @@ Your battery usage may increase.</string>
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Eim-Z7-BkO">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="1752"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="1747"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a1C-2s-72y" userLabel="Success Header View">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="232"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last updated: 10:10 pm" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="upc-i0-4H3">
-                                                        <rect key="frame" x="145" y="184.5" width="151" height="19.5"/>
+                                                        <rect key="frame" x="145" y="188.5" width="139" height="15.5"/>
                                                         <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="13"/>
                                                         <color key="textColor" red="0.062504105269999999" green="0.1856559217" blue="0.60788136719999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
@@ -963,13 +944,13 @@ Your battery usage may increase.</string>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Setup is incomplete" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="93z-Iu-TSR">
-                                                        <rect key="frame" x="84" y="141.5" width="152" height="24"/>
+                                                        <rect key="frame" x="89" y="141.5" width="142" height="19"/>
                                                         <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="16"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Help stop the virus spread by allowing all permissions." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ce-nD-DpI">
-                                                        <rect key="frame" x="40" y="165.5" width="240" height="142"/>
+                                                        <rect key="frame" x="40" y="160.5" width="240" height="147"/>
                                                         <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="16"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -989,10 +970,10 @@ Your battery usage may increase.</string>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vXJ-wP-bzJ" userLabel="App Permission Label View">
-                                                <rect key="frame" x="0.0" y="553.5" width="320" height="60"/>
+                                                <rect key="frame" x="0.0" y="553.5" width="320" height="55"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="App Permissions Status" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lM2-pC-IPR">
-                                                        <rect key="frame" x="18" y="24" width="302" height="24"/>
+                                                        <rect key="frame" x="18" y="24" width="302" height="19"/>
                                                         <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="16"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -1006,13 +987,13 @@ Your battery usage may increase.</string>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NC9-B7-ZEn" userLabel="Bluetooth Permission On Section">
-                                                <rect key="frame" x="0.0" y="613.5" width="320" height="86"/>
+                                                <rect key="frame" x="0.0" y="608.5" width="320" height="86"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n8B-yK-zPc" userLabel="Bluetooth Permission On Bar">
                                                         <rect key="frame" x="16" y="0.0" width="288" height="74"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allow Bluetooth: On" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lkG-8h-L41">
-                                                                <rect key="frame" x="16" y="16" width="153.5" height="42"/>
+                                                                <rect key="frame" x="16" y="16" width="143" height="42"/>
                                                                 <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="16"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -1073,13 +1054,13 @@ Your battery usage may increase.</string>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tx3-h9-HD9" userLabel="Bluetooth Permission Off Section">
-                                                <rect key="frame" x="0.0" y="699.5" width="320" height="86"/>
+                                                <rect key="frame" x="0.0" y="694.5" width="320" height="86"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZNn-4p-s3i" userLabel="Bluetooth Permission Off Bar">
                                                         <rect key="frame" x="16" y="0.0" width="288" height="74"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allow Bluetooth: Off" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LpF-lX-utx">
-                                                                <rect key="frame" x="16" y="16" width="155" height="42"/>
+                                                                <rect key="frame" x="16" y="16" width="143" height="42"/>
                                                                 <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="16"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -1140,13 +1121,13 @@ Your battery usage may increase.</string>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="epu-AT-8fq" userLabel="Bluetooth Status On Section">
-                                                <rect key="frame" x="0.0" y="785.5" width="320" height="180"/>
+                                                <rect key="frame" x="0.0" y="780.5" width="320" height="180"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ICq-T2-I96" userLabel="Bluetooth Status Bar On">
                                                         <rect key="frame" x="16" y="0.0" width="288" height="168"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bluetooth: On" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="byz-Ld-DQp">
-                                                                <rect key="frame" x="16" y="16" width="107" height="136"/>
+                                                                <rect key="frame" x="16" y="16" width="99.5" height="136"/>
                                                                 <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="16"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -1207,13 +1188,13 @@ Your battery usage may increase.</string>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CRB-vh-VZ7" userLabel="Bluetooth Status  Off Section">
-                                                <rect key="frame" x="0.0" y="965.5" width="320" height="180"/>
+                                                <rect key="frame" x="0.0" y="960.5" width="320" height="180"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JMY-Vd-8r5" userLabel="Bluetooth Status Bar Off">
                                                         <rect key="frame" x="16" y="0.0" width="288" height="168"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bluetooth: Off" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T1S-u0-WAI">
-                                                                <rect key="frame" x="16" y="16" width="108.5" height="136"/>
+                                                                <rect key="frame" x="16" y="16" width="100" height="136"/>
                                                                 <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="16"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -1274,13 +1255,13 @@ Your battery usage may increase.</string>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yhY-nY-ipb" userLabel="PN Permission On Section">
-                                                <rect key="frame" x="0.0" y="1145.5" width="320" height="86"/>
+                                                <rect key="frame" x="0.0" y="1140.5" width="320" height="86"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="32R-I8-GMD" userLabel="PN Permission On Bar">
                                                         <rect key="frame" x="16" y="0.0" width="288" height="74"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Push Notifications: On" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vcv-Er-8qy">
-                                                                <rect key="frame" x="16" y="16" width="171" height="42"/>
+                                                                <rect key="frame" x="16" y="16" width="160.5" height="42"/>
                                                                 <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="16"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -1341,13 +1322,13 @@ Your battery usage may increase.</string>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DPu-AG-NHf" userLabel="PN Permission Off Section">
-                                                <rect key="frame" x="0.0" y="1231.5" width="320" height="86"/>
+                                                <rect key="frame" x="0.0" y="1226.5" width="320" height="86"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="frd-Eh-ET5" userLabel="PN Permission Off Bar">
                                                         <rect key="frame" x="16" y="0.0" width="288" height="74"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Push Notifications: Off" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K6z-fL-CBE">
-                                                                <rect key="frame" x="16" y="16" width="173" height="42"/>
+                                                                <rect key="frame" x="16" y="16" width="160.5" height="42"/>
                                                                 <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="16"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -1408,25 +1389,25 @@ Your battery usage may increase.</string>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uRJ-w0-WBm" userLabel="Stop Spread Message">
-                                                <rect key="frame" x="0.0" y="1317.5" width="320" height="277"/>
+                                                <rect key="frame" x="0.0" y="1312.5" width="320" height="277"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4hN-Xq-0Iq" userLabel="Stop Spread Bar">
                                                         <rect key="frame" x="16" y="16" width="288" height="249"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How you can help stop the spread of COVID-19" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W1I-gM-V0v">
-                                                                <rect key="frame" x="16" y="16" width="256" height="47.5"/>
+                                                                <rect key="frame" x="16" y="16" width="256" height="37.5"/>
                                                                 <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="16"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keep app open in power saver mode, especially in meetings, public spaces, and public transport." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WV2-xp-47d">
-                                                                <rect key="frame" x="16" y="87.5" width="256" height="94.5"/>
+                                                                <rect key="frame" x="16" y="77.5" width="256" height="75"/>
                                                                 <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="16"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x5Y-U5-ZkO">
-                                                                <rect key="frame" x="16" y="196.5" width="258" height="31"/>
+                                                                <rect key="frame" x="16" y="167" width="258" height="60.5"/>
                                                                 <state key="normal">
                                                                     <attributedString key="attributedTitle">
                                                                         <fragment content="Use power saver mode">
@@ -1498,7 +1479,7 @@ Your battery usage may increase.</string>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="whv-Ue-XyY" userLabel="Monitor Section">
-                                                <rect key="frame" x="0.0" y="1594.5" width="320" height="44"/>
+                                                <rect key="frame" x="0.0" y="1589.5" width="320" height="44"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LIK-i8-waN" customClass="StyledButton" customModule="OpenTrace" customModuleProvider="target">
                                                         <rect key="frame" x="16" y="0.0" width="288" height="44"/>
@@ -1519,13 +1500,13 @@ Your battery usage may increase.</string>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DJW-Fc-oY0" userLabel="Share Section">
-                                                <rect key="frame" x="0.0" y="1638.5" width="320" height="113.5"/>
+                                                <rect key="frame" x="0.0" y="1633.5" width="320" height="113.5"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hWY-40-H8G" userLabel="Share Bar">
                                                         <rect key="frame" x="16" y="12" width="288" height="89.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Share this app" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2VB-oc-qKW">
-                                                                <rect key="frame" x="41" y="14" width="112" height="24"/>
+                                                                <rect key="frame" x="41" y="14" width="103.5" height="19"/>
                                                                 <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="16"/>
                                                                 <color key="textColor" red="0.089108936489999999" green="0.23694762589999999" blue="0.6823945642" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <nil key="highlightedColor"/>
@@ -1534,7 +1515,7 @@ Your battery usage may increase.</string>
                                                                 <rect key="frame" x="16" y="15" width="17" height="34.5"/>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Ask friends and family to help" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vD-4L-kMa">
-                                                                <rect key="frame" x="40" y="42" width="230" height="33.5"/>
+                                                                <rect key="frame" x="40" y="37" width="230" height="38.5"/>
                                                                 <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="16"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -2001,7 +1982,6 @@ Your battery usage may increase.</string>
         <image name="3-3 progress" width="408" height="9"/>
         <image name="bluetooth-1" width="278" height="193"/>
         <image name="bluetooth-accepted" width="278" height="193"/>
-        <image name="bluetooth-phones" width="246" height="169.5"/>
         <image name="button-gradient" width="272" height="48"/>
         <image name="gear" catalog="system" width="64" height="58"/>
         <image name="iconHelp" width="25" height="25"/>
