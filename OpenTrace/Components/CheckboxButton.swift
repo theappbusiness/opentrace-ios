@@ -25,6 +25,14 @@ final class CheckboxButton: UIButton {
 		layer.borderWidth = 2
 		layer.borderColor = UIColor.black.cgColor
 		setImage(UIImage(named: "check"), for: .selected)
-		imageEdgeInsets = .init(top: 4, left: 4, bottom: 4, right: 4)
+		imageView?.translatesAutoresizingMaskIntoConstraints = false
+		if let imageView = imageView {
+			NSLayoutConstraint.activate([
+				imageView.topAnchor.constraint(equalTo: topAnchor, constant: 4),
+				imageView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -4),
+				imageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 4),
+				imageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -4)
+			])
+		}
 	}
 }

@@ -14,15 +14,25 @@
 "Onboarding.DataNotUploaded" = "Data not uploaded";
 
 // MARK: - Intro
-"Onboarding.Intro.header" = "Help stop the spread of COVID-19 by turning Bluetooth on";
-"Onboarding.Intro.primaryBody" = "If you had close contact with a COVID-19 case, we help the health authority call you more quickly, to provide guidance and care.";
-"Onboarding.Intro.secondaryBody" = "To protect those around you, the health authority may also ask you to share your data.";
-"Onboarding.Intro.footerButtonTitle" = "I want to help";
+"Onboarding.Intro.header" = "Welcome to the Coronavirus COVID-19 Lockdown App";
+"Onboarding.Intro.primaryBody" = "A tool to reduce the spread of infectious diseases like COVID-19 through social distancing.";
+"Onboarding.Intro.footerButtonTitle" = "Continue";
 
 // MARK: - How It Works
-"Onboarding.HowItWorks.header" = "How OpenTrace works";
-"Onboarding.HowItWorks.body" = "We use Bluetooth signals to determine if you are near another OpenTrace user. \n\nThis proximity data is encrypted and stored only on your phone.\n\nThe health authority will seek your consent to upload the data, if it’s needed for contact tracing.";
-"Onboarding.HowItWorks.footerButtonTitle" = "Great!!!";
+"Onboarding.PermissionCheck.header" = "Your data is private and we only use non personal information";
+"Onboarding.PermissionCheck.body" = "In order for use to reduce the spread of Coronavirus please accept and agree to the following.";
+"Onboarding.PermissionCheck.footerButtonTitle" = "I agree";
+"Onboarding.PermissionCheck.termsAndPrivacyPolicyText" = "You agree to our Terms of use and privacy policy and we take this matter serious. ";
+"Onboarding.PermissionCheck.privacyPolicyHighlightedText" = "privacy policy";
+"Onboarding.PermissionCheck.termsHighlightedText" = "Terms of use";
+"Onboarding.PermissionCheck.noticationText" = "Agree to have push notifications. Please remember to switch these on.";
+"Onboarding.PermissionCheck.bluetoothText" = "You agree to accept our bluetooth data sharing without any personal data.";
+"Onboarding.PermissionCheck.PermissionsValidationError.title" = "Missing Fields";
+"Onboarding.PermissionCheck.PermissionsValidationError.message" = "All boxes must be checked to proceed";
+"Onboarding.PermissionCheck.NotificationError.title" = "Notification must be enabled";
+"Onboarding.PermissionCheck.NotificationError.message" = "To turn on notifications got to Settings > Notifications > APPNAME and set 'Allow Notifactions' to ON";
+"Onboarding.PermissionCheck.BluetoothError.title" = "Bluetooth status error";
+"Onboarding.PermissionCheck.BluetoothError.message" = "Please ensure that bluetooth is enabled on your device";
 
 // MARK: - Consent
 "Onboarding.Constent.header" = "Your consent is needed for the following:";

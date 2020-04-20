@@ -33,14 +33,33 @@ extension DisplayStrings {
 		enum Intro {
 			static let header = "Onboarding.Intro.header".localized
 			static let primaryBody = "Onboarding.Intro.primaryBody".localized
-			static let secondaryBody = "Onboarding.Intro.secondaryBody".localized
 			static let footerButtonTitle = "Onboarding.Intro.footerButtonTitle".localized
 		}
 
-		enum HowItWorks {
-			static let header = "Onboarding.HowItWorks.header".localized
-			static let body = "Onboarding.HowItWorks.body".localized
-			static let footerButtonTitle = "Onboarding.HowItWorks.footerButtonTitle".localized
+		enum PermissionCheck {
+			static let header = "Onboarding.PermissionCheck.header".localized
+			static let body = "Onboarding.PermissionCheck.body".localized
+			static let termsAndPrivacyPolicyText = "Onboarding.PermissionCheck.termsAndPrivacyPolicyText".localized
+			static let privacyPolicyHighlightedText = "Onboarding.PermissionCheck.privacyPolicyHighlightedText".localized
+			static let termsHighlightedText = "Onboarding.PermissionCheck.termsHighlightedText".localized
+			static let noticationText = "Onboarding.PermissionCheck.noticationText".localized
+			static let bluetoothText = "Onboarding.PermissionCheck.bluetoothText".localized
+			static let footerButtonTitle = "Onboarding.PermissionCheck.footerButtonTitle".localized
+
+			enum PermissionsValidationError {
+				static let title = "Onboarding.PermissionCheck.PermissionsValidationError.title".localized
+				static let message = "Onboarding.PermissionCheck.PermissionsValidationError.message".localized
+			}
+
+			enum NotificationError {
+				static let title = "Onboarding.PermissionCheck.NotificationError.title".localized
+				static let message = "Onboarding.PermissionCheck.NotificationError.message".localized
+			}
+
+			enum BluetoothError {
+				static let title = "Onboarding.PermissionCheck.BluetoothError.title".localized
+				static let message = "Onboarding.PermissionCheck.BluetoothError.message".localized
+			}
 		}
 
 		enum Constent {
