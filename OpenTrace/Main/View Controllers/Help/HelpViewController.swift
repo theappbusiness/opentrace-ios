@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseRemoteConfig
 import SafariServices
 
 final class HelpViewController: UIViewController {
@@ -29,18 +30,27 @@ final class HelpViewController: UIViewController {
     }
 
 	private func fetchTableData() {
-		guard let helpContentPath = Bundle.main.url(forResource: "HelpContent", withExtension: "json") else { return }
+        let helpConfigData = RemoteConfig.remoteConfig().configValue(forKey: "helpContent").dataValue
 		do {
-			let jsonData = try Data(contentsOf: helpContentPath, options: .mappedIfSafe)
-			let helpData = try JSONDecoder().decode([Section].self, from: jsonData)
+			let helpData = try JSONDecoder().decode([Section].self, from: helpConfigData)
 			dataSource = helpData
-		}
-		catch {
-			let alert = UIAlertController(title: Copy.Error.title, message: error.localizedDescription, preferredStyle: .alert)
-			alert.addAction(.init(title: Copy.Error.dismiss, style: .cancel))
-			present(alert, animated: true)
+		} catch {
+			fallBackToBundled()
 		}
 	}
+    
+    private func fallBackToBundled() {
+        guard let helpContentPath = Bundle.main.url(forResource: "HelpContent", withExtension: "json") else { return }
+        do {
+            let jsonData = try Data(contentsOf: helpContentPath, options: .mappedIfSafe)
+            let helpData = try JSONDecoder().decode([Section].self, from: jsonData)
+            dataSource = helpData
+        } catch {
+            let alert = UIAlertController(title: Copy.Error.title, message: error.localizedDescription, preferredStyle: .alert)
+            alert.addAction(.init(title: Copy.Error.dismiss, style: .cancel))
+            present(alert, animated: true)
+        }
+    }
 }
 
 extension HelpViewController: UITableViewDelegate, UITableViewDataSource {
