@@ -26,6 +26,7 @@ final class InfectedNotificationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setCopy()
     }
     
     private func setCopy() {
