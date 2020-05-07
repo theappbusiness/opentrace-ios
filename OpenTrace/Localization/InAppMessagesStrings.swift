@@ -13,9 +13,9 @@ extension DisplayStrings {
     enum InAppMessages {
         
         enum InfectedContactNotification {
-            static let title = "UploadData.Info.title".localized
-            static let subHeading = "UploadData.Info.subHeading".localized
-            static let primaryCTA = "UploadData.Info.primary_cta".localized
+            static let title = "UploadData.InfectedContactNotification.title".localized
+            static let subHeading = "UploadData.InfectedContactNotification.subHeading".localized
+            static let primaryCTA = "UploadData.InfectedContactNotification.primary_cta".localized
         }
     }
 }
