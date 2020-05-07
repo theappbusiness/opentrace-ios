@@ -72,13 +72,13 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSBluetoothAlwaysUsageDescription</key>
-	<string>OpenTrace exchanges Bluetooth signals with nearby phones running the same app. These signals contain an anonymised ID, which is encrypted and changes continually to ensure your privacy.</string>
+	<string>Intelligent Lockdown exchanges Bluetooth signals with nearby phones running the same app. These signals contain an anonymised ID, which is encrypted and changes continually to ensure your privacy.</string>
 	<key>NSBluetoothPeripheralUsageDescription</key>
-	<string>OpenTrace exchanges Bluetooth signals with nearby phones running the same app. These signals contain an anonymised ID, which is encrypted and changes continually to ensure your privacy.</string>
+	<string>Intelligent Lockdown exchanges Bluetooth signals with nearby phones running the same app. These signals contain an anonymised ID, which is encrypted and changes continually to ensure your privacy.</string>
 	<key>NSCameraUsageDescription</key>
-	<string>Grant OpenTrace permissions to access your camera if you would like to upload a photo as part of a support request</string>
+	<string>Grant Intelligent Lockdown permissions to access your camera if you would like to upload a photo as part of a support request</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Grant OpenTrace permissions to access your photo library if you would like to upload a photo as part of a support request</string>
+	<string>Grant Intelligent Lockdown permissions to access your photo library if you would like to upload a photo as part of a support request</string>
 	<key>TRACER_SVC_ID</key>
 	<string>${SERVICE_UUID}</string>
 	<key>UIAppFonts</key>

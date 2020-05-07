@@ -81,7 +81,7 @@ final class PermissionCheckViewController: UIViewController {
 
 	private func enableBluetoothPermissions() {
 		BlueTraceLocalNotifications.shared.checkAuthorization { [weak self] granted in
-			if granted  {
+			if granted {
 				self?.pushNotificationCheck.isChecked = true
 			} else {
 				self?.presentNotificationAccessAlert()
@@ -91,14 +91,21 @@ final class PermissionCheckViewController: UIViewController {
 	}
 
 	private func checkBluetoothStatus() {
-		let bluetoothIsPoweredOn = BluetraceManager.shared.isBluetoothOn()
-        let bluetoothIsAuthorized = BluetraceManager.shared.isBluetoothAuthorized()
-		if bluetoothIsPoweredOn && bluetoothIsAuthorized {
-			bluetoothPermission.isChecked = true
-		} else {
-			bluetoothPermission.isChecked = false
-			presentBluetoothNotEnabledAlert()
-		}
+        BluetraceManager.shared.bluetoothDidUpdateStateCallback = { [weak self] state in
+            DispatchQueue.main.async {
+                guard BluetraceManager.shared.isBluetoothAuthorized(), BluetraceManager.shared.isBluetoothOn() else {
+                    self?.bluetoothPermission.isChecked = false
+                    self?.presentBluetoothNotEnabledAlert()
+                    return
+                }
+                self?.bluetoothPermission.isChecked = true
+            }
+        }
+        if BluetraceManager.shared.isBluetoothAuthorized(), BluetraceManager.shared.isBluetoothOn() {
+            bluetoothPermission.isChecked = true
+        } else {
+            BluetraceManager.shared.turnOn()
+        }
 	}
 
 	private func permissionsAreValid() -> Bool {
