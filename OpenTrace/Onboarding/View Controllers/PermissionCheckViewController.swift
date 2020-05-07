@@ -24,7 +24,11 @@ final class PermissionCheckViewController: UIViewController {
 
     @IBAction func footerButtonTapped(_ sender: UIButton) {
 		guard permissionsAreValid() else { return }
+		//Âguard permissionsAreValid() else { return }
+        OnboardingManager.shared.completedBluetoothOnboarding = true
+        OnboardingManager.shared.allowedPermissions = true
         OnboardingManager.shared.completedIWantToHelp = true
+        OnboardingManager.shared.hasConsented = true
         loadingView.show()
         Auth.auth().signInAnonymously { [weak self] (result, error) in
             self?.loadingView.hide()

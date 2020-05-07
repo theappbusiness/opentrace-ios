@@ -13,11 +13,11 @@ class OnboardingManager {
         if !completedIWantToHelp {
             return "intro"
         } else if !hasConsented {
-            return "consent"
+            return "howItWorks"
         } else if !allowedPermissions {
-            return "permissions"
+            return "howItWorks"
         } else if !completedBluetoothOnboarding {
-            return "turnOnBluetooth"
+            return "howItWorks"
         } else {
             return "main"
         }

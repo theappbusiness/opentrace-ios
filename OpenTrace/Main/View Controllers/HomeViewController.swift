@@ -143,7 +143,7 @@ class HomeViewController: UIViewController {
 
 struct TracerRemoteConfig {
     static private(set) var instance: RemoteConfig!
-    static let defaultShareText = "Join me in stopping the spread of COVID-19! Download OpenTrace!"
+    static let defaultShareText = "Join me in stopping the spread of COVID-19! Download COVID-19 App."
 
     init() {
         // Setup remote config

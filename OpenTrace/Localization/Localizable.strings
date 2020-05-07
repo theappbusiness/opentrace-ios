@@ -79,11 +79,11 @@
 
 // MARK: - Home
 "Home.title" = "The Coronavirus COVID-19 Lockdown App";
-"Home.subtitle" = "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accus antium dolore mque lauda ntium esparanti dollo fiunti est forunti.";
-"Home.checkWhatTracking" = "Check what we are tracking";
-"Home.startMonitoring" = "Track my condition";
+"Home.subtitle" = "Together, we'll get Corona under control. By reporting your condition and using the app you will help flatten the curve and manage the spread of the virius";
+"Home.checkWhatTracking" = "See what we are tracking";
+"Home.startMonitoring" = "Report my condition";
 "Home.shareTitle" = "Share this app";
-"Home.shareSubtitle" = "Ask friends and family to help.";
+"Home.shareSubtitle" = "Ask your friends and family to help";
 
 // MARK: - Monitoring, Health Check
 "Monitoring.HealthCheck.title" = "How do you feel today?";
@@ -96,9 +96,9 @@
 "Monitoring.FeelingWell.subtitle" = "Follow the standard precautions. Keep coming back to the app to report how you’re feeling.";
 
 // MARK: - Monitoring, Track symptoms
-"Monitoring.TrackSymptoms.title" = "Let’s find out more about your condition";
-"Monitoring.TrackSymptoms.subtitle" = "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accus antium.";
-"Monitoring.TrackSymptoms.closingStatement" = "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accus antium.";
+"Monitoring.TrackSymptoms.title" = "Let's find out more about how you're feeling.";
+"Monitoring.TrackSymptoms.subtitle" = "Please fill in the form. We'll be able to get a better understanding of your symptoms ";
+"Monitoring.TrackSymptoms.closingStatement" = "";
 
 // MARK: - Monitoring, Track symptoms, Error Incomplete
 "Monitoring.TrackSymptoms.ErrorIncomplete.title" = "All questions required";
@@ -106,13 +106,13 @@
 
 // MARK: - Monitoring, Advice
 "Monitoring.Advice.title" = "Advice and tips to keep you safe and sound";
-"Monitoring.Advice.subtitle" = "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accus antium.";
-"Monitoring.Advice.closingStatement" = "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accus antium.";
+"Monitoring.Advice.subtitle" = "You're experiencing symptoms of the Virus. Here are some tips:";
+"Monitoring.Advice.closingStatement" = "";
 
 // MARK: - Monitoring, Contact Form
-"Monitoring.ContactForm.title" = "Please enter your details";
-"Monitoring.ContactForm.subtitle" = "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accus antium.";
-"Monitoring.ContactForm.closingStatement" = "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accus antium.";
+"Monitoring.ContactForm.title" = "We would like to help you";
+"Monitoring.ContactForm.subtitle" = "Please fill in your details. We would like to talk to you to get a better understanding of your symptomps and see how we can help.";
+"Monitoring.ContactForm.closingStatement" = "";
 
 // MARK: - Monitoring, Contact Form, Error Incomplete
 "Monitoring.ContactForm.ErrorIncomplete.title" = "All fields are required";
